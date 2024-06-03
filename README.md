@@ -1,1 +1,1 @@
-# -Quiz-App-Redux
+# Quiz-App-Redux
