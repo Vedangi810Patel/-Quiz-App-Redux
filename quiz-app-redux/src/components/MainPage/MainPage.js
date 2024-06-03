@@ -3,8 +3,10 @@ import { useDispatch } from 'react-redux';
 import { setNumberOfQuestions } from '../../Store';
 import { Container, Form, Button, Row, Col, Card } from 'react-bootstrap';
 import './MainPage.css';
+import { IoIosArrowDown } from "react-icons/io";
 
-function MainPage() {
+
+const MainPage = () => {
     const [numQuestions, setNumQuestions] = useState('');
     const dispatch = useDispatch();
 
@@ -23,7 +25,7 @@ function MainPage() {
                         <Form.Group>
                             <Form.Label>Number of Questions</Form.Label>
                             <Form.Control as="select" value={numQuestions} onChange={(e) => setNumQuestions(e.target.value)}>
-                                <option value="">Select...</option>
+                                <option value="">Select the No of Question... <IoIosArrowDown /> </option>
                                 <option value="5">5</option>
                                 <option value="10">10</option>
                                 <option value="15">15</option>

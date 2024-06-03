@@ -7,6 +7,7 @@ const initialState = {
   questions: [],
   numberOfQuestions: 0,
   timer: 59,
+  quizSubmitted: false,
 };
 
 const quizSlice = createSlice({
@@ -34,14 +35,18 @@ const quizSlice = createSlice({
       state.questions = [];
       state.numberOfQuestions = 0;
       state.timer = 59;
+      state.quizSubmitted = false;
     },
     decrementTimer: (state) => {
       state.timer -= 1;
+    },
+    submitQuiz: (state) => {
+      state.quizSubmitted = true;
     }
   }
 });
 
-export const { setNumberOfQuestions, setCurrentStep, setAnswer, resetQuiz, decrementTimer } = quizSlice.actions;
+export const { setNumberOfQuestions, setCurrentStep, setAnswer, resetQuiz, decrementTimer, submitQuiz } = quizSlice.actions;
 
 const store = configureStore({
   reducer: {

@@ -20,9 +20,11 @@ import QuizPage from './components/QuizPage/QuizPage';
 import SummaryPage from './components/SummaryPage/SummaryPage';
 
 function App() {
-  const { questions, currentStep } = useSelector(state => state.quiz);
+  const { questions, currentStep, quizSubmitted } = useSelector(state => state.quiz);
 
-  if (questions.length === 0) {
+  if (quizSubmitted) {
+    return <SummaryPage />;
+  } else if (questions.length === 0) {
     return <StartPage />;
   } else if (currentStep < questions.length) {
     return <QuizPage />;

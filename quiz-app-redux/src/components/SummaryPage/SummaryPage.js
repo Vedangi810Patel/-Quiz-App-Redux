@@ -4,7 +4,7 @@ import { resetQuiz } from '../../Store';
 import { Container, Table, Button, Card } from 'react-bootstrap';
 import './SummaryPage.css';
 
-function SummaryPage() {
+const SummaryPage = () => {
     const { questions, selectedAnswers } = useSelector(state => state.quiz);
     const dispatch = useDispatch();
 
@@ -37,7 +37,7 @@ function SummaryPage() {
                             ))}
                         </tbody>
                     </Table>
-                    <Button onClick={startNewQuiz} variant="success">Start Another Quiz</Button>
+                    <Button onClick={startNewQuiz} variant="success">Start A New Quiz</Button>
                 </Card.Body>
             </Card>
         </Container>
