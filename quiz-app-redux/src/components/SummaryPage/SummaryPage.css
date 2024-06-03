@@ -1,0 +1,15 @@
+.summary-page {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.summary-card {
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.summary-card .btn-success {
+    margin-top: 1rem;
+    width: 100%;
+}

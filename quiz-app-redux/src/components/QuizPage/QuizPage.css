@@ -1,0 +1,19 @@
+.quiz-page {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.quiz-card {
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.quiz-card .form-check-input {
+    margin-top: 0.3rem;
+}
+
+.quiz-card .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
