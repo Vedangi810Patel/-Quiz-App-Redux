@@ -17,16 +17,24 @@ const QuizPage = () => {
             if (timer > 0) {
                 dispatch(decrementTimer());
             } else {
-                handleSubmit();
+                handleTimerEnd();
             }
         }, 1000);
 
         return () => clearInterval(timerInterval);
-    }, [dispatch, timer]);
+    }, [dispatch, timer, currentStep, questions.length]);
 
     const handleAnswerChange = (e) => {
         dispatch(setAnswer({ index: currentStep, answer: e.target.value }));
         setShowWarning(false);
+    };
+
+    const handleTimerEnd = () => {
+        if (currentStep === questions.length - 1) {
+            handleSubmit();
+        } else {
+            dispatch(setCurrentStep(currentStep + 1));
+        }
     };
 
     const nextQuestion = () => {
