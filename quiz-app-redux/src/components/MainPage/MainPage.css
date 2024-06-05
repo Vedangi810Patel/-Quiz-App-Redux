@@ -1,4 +1,4 @@
-.main-page {
+/* .main-page {
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
 }
 
@@ -15,4 +15,60 @@
 
 .main-card .btn-primary {
     width: 100%;
+} */
+
+
+
+/* .main-page .main-card {
+    max-width: 100%;
+    width: 100%;
+    margin: 10px;
+}
+
+@media (min-width: 576px) {
+    .main-page .main-card {
+        width: 400px;
+    }
+} */
+
+
+
+.main-page {
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+}
+
+.main-card .card-title {
+    font-size: 1.5rem;
+    color: #333333;
+}
+
+.main-card .form-label,
+.main-card .form-control,
+.main-card .form-control:focus {
+    color: #555555;
+}
+
+.main-card .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.main-card .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
 }

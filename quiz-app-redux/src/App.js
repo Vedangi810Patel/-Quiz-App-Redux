@@ -18,6 +18,7 @@ import { useSelector } from 'react-redux';
 import StartPage from './components/MainPage/MainPage';
 import QuizPage from './components/QuizPage/QuizPage';
 import SummaryPage from './components/SummaryPage/SummaryPage';
+import './App.css';
 
 function App() {
   const { questions, currentStep, quizSubmitted } = useSelector(state => state.quiz);
@@ -34,3 +35,5 @@ function App() {
 }
 
 export default App;
+
+
